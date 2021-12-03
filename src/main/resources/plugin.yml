@@ -1,0 +1,7 @@
+name: MyCommands
+version: '${project.version}'
+main: org.louis.mycommands.MyCommands
+api-version: 1.18
+authors: [ Louis_Play ]
+description: Mein Miencraft Plguin
+website: https://github.com/LouisSpielt
