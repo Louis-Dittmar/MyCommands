@@ -2,6 +2,7 @@ package org.louis.mycommands;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.louis.mycommands.commands.GamemodeCommand;
+import org.louis.mycommands.tabcomplete.GamemodeComplete;
 
 public final class MyCommands extends JavaPlugin {
 
@@ -10,6 +11,7 @@ public final class MyCommands extends JavaPlugin {
 
 
     this.getCommand("gamemode").setExecutor(new GamemodeCommand());
+        getCommand("command").setTabCompleter(new GamemodeComplete());
 
     }
 
