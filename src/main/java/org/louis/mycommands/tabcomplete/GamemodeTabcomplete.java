@@ -6,11 +6,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class GamemodeComplete implements TabCompleter {
+public class GamemodeTabcomplete implements TabCompleter {
     /**
      * Requests a list of possible completions for a command argument.
      *
@@ -25,26 +24,25 @@ public class GamemodeComplete implements TabCompleter {
      * to default to the command executor
      */
     @Override
-    public List<String> onTabComplete( CommandSender sender,Command command, String alias,  String[] args) {
+    public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
 
-
-        if(args.length == 0) {
-            List<String> completions = new ArrayList<String>();
-            completions.add("0");
-            completions.add("1");
-            completions.add("2");
-            completions.add("3");
+        if(args.length == 1) {
+            List<String> completions = new ArrayList<>();
+            completions.add("survival");
+            completions.add("creative");
+            completions.add("adventure");
+            completions.add("spectator");
             return completions;
         }
-        if(args.length == 1) {
-            List<String> completions = new ArrayList<String>();
-            Player[] players = new Player[Bukkit.getOnlinePlayers().size()];
+        if(args.length == 2) {
+            List<String> PlayerNames = new ArrayList<>();
+            Player[] players = new Player[Bukkit.getServer().getOnlinePlayers().size()];
+            Bukkit.getServer().getOnlinePlayers().toArray(players);
             for(int i = 0; i < players.length; i++) {
-                completions.add(players[i].getName());
-                return completions;
+                PlayerNames.add(players[i].getName());
             }
+            return PlayerNames;
         }
-
 
         return null;
     }
