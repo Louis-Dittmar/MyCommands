@@ -41,6 +41,10 @@ public class GamemodeTabcomplete implements TabCompleter {
             for(int i = 0; i < players.length; i++) {
                 PlayerNames.add(players[i].getName());
             }
+            PlayerNames.add("@a");
+            PlayerNames.add("@p");
+            PlayerNames.add("@e");
+            PlayerNames.add("@r");
             return PlayerNames;
         }
 

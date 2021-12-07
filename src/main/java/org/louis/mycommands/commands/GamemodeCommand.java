@@ -29,9 +29,6 @@ public class GamemodeCommand implements CommandExecutor {
     public boolean onCommand( CommandSender sender, Command command, String label, String[] args) {
 
 
-        sender.sendMessage("Args: " + args.length);
-
-
         if(!(sender instanceof Player)) {
             if(!(args.length == 0)) {
                 sender.sendMessage("Zu Kurz"); // TODO Chat Message
@@ -144,6 +141,10 @@ public class GamemodeCommand implements CommandExecutor {
                     return false;
             }
         }
+
+        //args 2
+
+
         Player target = Bukkit.getPlayer(args[1]);
             if(args.length > 2) {
                 sender.sendMessage("Zu Lang"); //  TODO Message
@@ -154,15 +155,11 @@ public class GamemodeCommand implements CommandExecutor {
                 return false;
             }
 
-        if (player.getServer().getPlayer(args[1]) == null) {
+        if ((player.getServer().getPlayer(args[1]) == null) ) {
             sender.sendMessage("Nicht Online / Oder Existiert"); // TODO Message
             return false;
 
         }
-
-         /*
-        Args 0: player
-         */
 
             switch(args[0]) {
                 case "0":
@@ -180,8 +177,6 @@ public class GamemodeCommand implements CommandExecutor {
                     sender.sendMessage("Hat jetzt Gamemode 0 Sender"); // TODO Chat Message
                     target.sendMessage("Hat jetzt Gamemode 0 Target"); // TODO Chat Message
                     target.setGameMode(GameMode.SURVIVAL);
-
-
                     return true;
                 case "1":
                 case "creative":
