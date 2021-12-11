@@ -88,9 +88,7 @@ public class GamemodeCommand implements CommandExecutor {
 
         }
 
-        /*
-        Args 1: player
-         */
+
 
         if(args.length == 1 ) {
             if (!(sender.hasPermission("mycommands.change"))) { // TODO Permission
