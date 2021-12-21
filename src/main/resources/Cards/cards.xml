@@ -170,7 +170,7 @@
         <card>Gefühle.</card>
         <card>Sachen anleck- en, damit sie einem gehören.</card>
         <card>Astra Die Plazenta.</card>
-        <card>Spontane menschliche Selbstent- zündung.</card>
+        <card>Spontane menschliche Selbstentzündung.</card>
         <card>Corona</card>
         <card>Freunde mit Extras.</card>
         <card>Fingermalerei.</card>
@@ -233,7 +233,8 @@
         <card>Dem Singen und Tanzen verfallen(d).</card>
         <card>Lepra.</card>
         <card>Glory-holes.</card>
-        <card>Nippelpiercings Das Herz eines Kindes.</card>
+        <card>Das Herz eines Kindes.</card>
+        <card>Nippelpiercings.</card>
         <card>Hundebabies!</card>
         <card>Halb nackt auf Dannys Parkplatz aufwachen(d).</card>
         <card>Kofferdämme.</card>
@@ -290,7 +291,7 @@
         <card>Essbare Unterwäsche.</card>
         <card>Viagra®.</card>
         <card>Suppe, die zu heiß ist.</card>
-        <card>Mohammed (Gott segne ihn und schenke ihm Heil!)</card>
+        <card>Mohammed (Gott segne ihn und schenke ihm Heil!</card>
         <card>Überrasch- ungssex!</card>
         <card>McDonalds Einmal Eins.</card>
         <card>Alleine Alkohol trinken.</card>
@@ -623,13 +624,13 @@
         <card>Ein kuschelbedürftiger Grizzly.</card>
         <card>Magic Mushrooms.</card>
         <card>Eine Alkoholvergiftung.</card>
-        <card>Die Bild-Zeitung</card>
-        <card>Kostenlose Süßigkeiten von Fremden</card>
-        <card>Die deutsche Bahn</card>
-        <card>YouTube</card>
-        <card>Spongebob Schwammkopf</card>
-        <card>Neil Patrick Harris</card>
-        <card>Die Augsburger Puppenkiste</card>
+        <card>Die Bild-Zeitung.</card>
+        <card>Kostenlose Süßigkeiten von Fremden.</card>
+        <card>Die deutsche Bahn.</card>
+        <card>YouTube.</card>
+        <card>Spongebob Schwammkopf.</card>
+        <card>Neil Patrick Harris.</card>
+        <card>Die Augsburger Puppenkiste.</card>
         <card>Origami Sexspielzeug.</card>
         <card>In die Badewannne scheißen.</card>
         <card>Gesichtsmalerei mit Permanentfarben.</card>
@@ -848,11 +849,11 @@
         <card>Sexuelle Spannung.</card>
         <card>Fette Schenkel.</card>
         <card>Toilettenpapier mit Juckpulver.</card>
-        <card>Öffentliche Toiletten</card>
-        <card>Ein realistischer Sexbot</card>
-        <card>Sexuelle Gefälligkeiten</card>
+        <card>Öffentliche Toiletten.</card>
+        <card>Ein realistischer Sexbot.</card>
+        <card>Sexuelle Gefälligkeiten.</card>
         <card>Zentauren</card>
-        <card>Ein Pantomime mit Tourette-Syndrom</card>
+        <card>Ein Pantomime mit Tourette-Syndrom.</card>
         <card>Das Michelin-Männchen.</card>
         <card>Mundgeruch.</card>
         <card>Ein vollständig bekleideter weiblicher Videospielcharakter.</card>
@@ -872,8 +873,12 @@
         <card>20 Euro.</card>
         <card>Die Village People.</card>
         <card>Auf die dritte Welt scheißen.</card>
-
-
+        <!-- Andere Karten / von mir / Ideen von Freunden -->
+        <card>Die Sonnic hat Immer Recht Stiftung</card>
+        <card>Olaf Scholz</card>
+        <card>Andi Scheuer</card>
+        <card>Axel Voss</card>
+        <card>Ein Xerox-Scan</card>
 
     </cards>
 </resource>
