@@ -26,7 +26,7 @@ public class GamemodeTabcomplete implements TabCompleter {
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
 
-        if(args.length == 1) {
+        if (args.length == 1) {
             List<String> completions = new ArrayList<>();
             completions.add("survival");
             completions.add("creative");
@@ -34,11 +34,11 @@ public class GamemodeTabcomplete implements TabCompleter {
             completions.add("spectator");
             return completions;
         }
-        if(args.length == 2) {
+        if (args.length == 2) {
             List<String> PlayerNames = new ArrayList<>();
             Player[] players = new Player[Bukkit.getServer().getOnlinePlayers().size()];
             Bukkit.getServer().getOnlinePlayers().toArray(players);
-            for(int i = 0; i < players.length; i++) {
+            for (int i = 0; i < players.length; i++) {
                 PlayerNames.add(players[i].getName());
             }
             PlayerNames.add("@a");

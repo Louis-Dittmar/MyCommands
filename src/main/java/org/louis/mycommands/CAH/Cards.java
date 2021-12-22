@@ -16,30 +16,29 @@ public class Cards {
 
     public ArrayList<String> GetCards(int amount) {
 
-            DocumentBuilderFactory DocumentBuilderF = DocumentBuilderFactory.newInstance();
-            try {
-                DocumentBuilderF.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
-                DocumentBuilder DocumentB = DocumentBuilderF.newDocumentBuilder();
-                Document doc = DocumentB.parse(new File("src/main/resources/Cards/cards.xml"));
-                doc.getDocumentElement().normalize();
+        DocumentBuilderFactory DocumentBuilderF = DocumentBuilderFactory.newInstance();
+        try {
+            DocumentBuilderF.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+            DocumentBuilder DocumentB = DocumentBuilderF.newDocumentBuilder();
+            Document doc = DocumentB.parse(new File("src/main/resources/Cards/cards.xml"));
+            doc.getDocumentElement().normalize();
 
-                NodeList list = doc.getElementsByTagName("card");
+            NodeList list = doc.getElementsByTagName("card");
 
-                ArrayList<String> cards = new ArrayList<>();
-                Random rand = new Random();
-                for (int i = 0; i < amount; i++) {
-                    int value = rand.nextInt(list.getLength() + 1);
-                    Node node = list.item(value);
-                    cards.add(node.getTextContent());
-                }
-                return cards;
-            } catch (Exception e) {
-                e.printStackTrace();
+            ArrayList<String> cards = new ArrayList<>();
+            Random rand = new Random();
+            for (int i = 0; i < amount; i++) {
+                int value = rand.nextInt(list.getLength() + 1);
+                Node node = list.item(value);
+                cards.add(node.getTextContent());
             }
+            return cards;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
 
     }
-
 
 
 }

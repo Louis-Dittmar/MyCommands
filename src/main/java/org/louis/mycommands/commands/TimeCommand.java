@@ -1,8 +1,11 @@
 package org.louis.mycommands.commands;
 
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 
 public class TimeCommand implements CommandExecutor {
@@ -23,6 +26,18 @@ public class TimeCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+
+        //Console Execute
+        if (!(sender instanceof Player)) {
+
+        }
+        Player player = (Player) sender;
         return false;
+    }
+
+    private void SetTime(int time, @NotNull World world) {
+        long days = Math.round(world.getTime() / 20000);
+
+
     }
 }
