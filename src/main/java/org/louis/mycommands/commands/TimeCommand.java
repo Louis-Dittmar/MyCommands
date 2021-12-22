@@ -31,12 +31,20 @@ public class TimeCommand implements CommandExecutor {
         if (!(sender instanceof Player)) {
 
         }
+        assert sender instanceof Player;
         Player player = (Player) sender;
+        SetTime(Integer.parseInt(args[1]), player.getWorld());
         return false;
     }
 
+
     private void SetTime(int time, @NotNull World world) {
         long days = Math.round(world.getTime() / 20000);
+        long calc = (days * 20000) + time;
+
+        for (long i = (days * 20000); i < calc; i++) {
+            world.setTime(calc);
+        }
 
 
     }
