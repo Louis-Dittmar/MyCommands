@@ -1,11 +1,10 @@
 package org.louis.mycommands.commands;
 
-import org.bukkit.World;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.jetbrains.annotations.NotNull;
 
 
 public class TimeCommand implements CommandExecutor {
@@ -27,25 +26,31 @@ public class TimeCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        //Console Execute
-        if (!(sender instanceof Player)) {
+        Player player = (Player) sender; // palyer
+        String world = player.getWorld().getName(); // get world name
+        int wantedtime = Integer.parseInt(args[0]);  // get args 0 (/time 2000
 
+        int currenttime = (int) Bukkit.getServer().getWorld(world).getTime(); // Nutze die Akutelle welt zeit
+
+        int diff = 0;
+        if (wantedtime <= currenttime) {
+            diff = currenttime - wantedtime;
+        } else {
+            diff = wantedtime - currenttime;
         }
-        assert sender instanceof Player;
-        Player player = (Player) sender;
-        SetTime(Integer.parseInt(args[1]), player.getWorld());
-        return false;
-    }
+        sender.sendMessage("Differenz: " + diff);
+        if (wantedtime > Bukkit.getServer().getWorld(world).getTime()) {
 
+            for (int i = currenttime; i < wantedtime; i++) {
+                Bukkit.getServer().getWorld(world).setTime(i);
+            }
 
-    private void SetTime(int time, @NotNull World world) {
-        long days = Math.round(world.getTime() / 20000);
-        long calc = (days * 20000) + time;
-
-        for (long i = (days * 20000); i < calc; i++) {
-            world.setTime(calc);
+            return true;
+        } else {
+            for (int i = currenttime; i > wantedtime; i--) {
+                Bukkit.getServer().getWorld(world).setTime(i);
+            }
+            return true;
         }
-
-
     }
 }
